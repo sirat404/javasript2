@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>responsive web</title>
+</head>
+<body>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <h1>Welcome to My HTML Page</h1>
+    
+    <!-- Image Tag -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Rosemount%2C_MN_-_Anytime_Fitness_gym_exterior_%2843460728481%29.jpg/1024px-Rosemount%2C_MN_-_Anytime_Fitness_gym_exterior_%2843460728481%29.jpg" style="width:100%;height:auto;" alt="Image">
+
+
+    <h1 style="font-size:10vw" >JavaScript Concepts </h1>
+
+    <h2>String Methods</h2>
+    <p id="stringMethods"></p>
+
+    <h2>Number Methods</h2>
+    <p id="numberMethods"></p>
+
+    <h2>Array Methods</h2>
+    <p id="arrayMethods"></p>
+
+    <h2>Date Methods</h2>
+    <p id="dateMethods"></p>
+
+    <h2>Function Methods</h2>
+    <p id="functionMethods"></p>
+
+    <script>
+        // String Methods
+        const str = "Hello Friends";
+        document.getElementById("stringMethods").innerHTML = `
+            Length: ${str.length}<br>
+            Uppercase: ${str.toUpperCase()}<br>
+            Lowercase: ${str.toLowerCase()}<br>
+            Substring: ${str.substring(0, 5)}<br>
+            Replace: ${str.replace("World", "Universe")}<br>
+        `;
+
+        // Number Methods
+        const num = 42.56789;
+        document.getElementById("numberMethods").innerHTML = `
+            Fixed to 2 decimals: ${num.toFixed(2)}<br>
+            Exponential notation: ${num.toExponential(2)}<br>
+            Integer part: ${Math.floor(num)}<br>
+            Absolute value: ${Math.abs(num)}<br>
+            Random number between 0 and 1: ${Math.random()}<br>
+        `;
+
+        // Array Methods
+        const numbers = [1, 2, 3, 4, 5];
+        const words = ["orange", "banana", "mango"];
+        const combined = numbers.concat(words);
+        document.getElementById("arrayMethods").innerHTML = `
+            Concatenated Array: ${combined}<br>
+            Joined Array: ${combined.join(", ")}<br>
+            First Element: ${combined[0]}<br>
+            Last Element: ${combined[combined.length - 1]}<br>
+            Reversed Array: ${combined.reverse()}<br>
+        `;
+
+        // Date Methods
+        const today = new Date();
+        document.getElementById("dateMethods").innerHTML = `
+            Current Date and Time: ${today}<br>
+            Year: ${today.getFullYear()}<br>
+            Month (0-11): ${today.getMonth()}<br>
+            Day of the Week (0-6): ${today.getDay()}<br>
+            Hours (0-23): ${today.getHours()}<br>
+        `;
+
+        // Function Methods
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+        const sayHello = greet("sirat");
+        document.getElementById("functionMethods").innerHTML = `
+            Function Output: ${sayHello}<br>
+        `; // Additional Function Methods
+        function addNumbers(a, b) {
+            return a + b;
+        }
+        const sum = addNumbers(5, 3);
+        document.getElementById("functionMethods").innerHTML += `
+            Function Output 2: Sum of 5 and 3 is ${sum}<br>
+        `;
+
+        function multiplyNumbers(a, b) {
+            return a * b;
+        }
+        const product = multiplyNumbers(4, 6);
+        document.getElementById("functionMethods").innerHTML += `
+            Function Output 3: Product of 4 and 6 is ${product}<br>
+        `;
+
+
+    </script>
+</body>
+</html>
